@@ -36,4 +36,15 @@
             </example>
         </helpers>
     </global>
+    <frontend>
+        <routers>
+            <example>
+                <use>standard</use>
+                <args>
+                    <frontName>example</frontName>
+                    <module>MasteringMagento_Example</module>
+                </args>
+            </example>
+        </routers>
+    </frontend>
 </config>
