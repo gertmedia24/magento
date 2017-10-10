@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE config>
+<!--
+Sect 3: Creating system config
+Creates a sys conf item under Sys > Conf > General > Example Options (fieldset)
+-->
+<config>
+    <sections>
+        <general translate="label">
+            <groups>
+                <example translate="label">
+                    <label>Example Options</label>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <some_field translate="label">
+                            <label>Some Field</label>
+                            <frontend_type>text</frontend_type> <!-- More frontend types can be found in the lib/Varien/Data/Form/Element folder -->
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </some_field>
+                    </fields>
+                </example>
+            </groups>
+        </general>
+    </sections>
+</config>
