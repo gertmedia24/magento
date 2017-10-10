@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE config>
+
+<config>
+    <menu>
+        <!-- Sect 3: Extending admin - create top level menu item -->
+        <!-- Note: also need to add <admin> section to config.xml -->
+        <example translate="title" module="example">
+            <title>Example</title>
+            <sort_order>1000</sort_order>
+            <action>adminhtml/example</action>
+        </example>
+    </menu>
+</config>

@@ -36,6 +36,18 @@
             </example>
         </helpers>
     </global>
+    <!-- Sect 3: Extending admin - also see adminhtml.xml -->
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <example before="Mage_Adminhtml">MasteringMagento_Example_Adminhtml</example>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
     <frontend>
         <!-- Sect 2: Controllers -->
         <routers>
