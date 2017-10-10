@@ -7,6 +7,15 @@ class MasteringMagento_Example_Adminhtml_ExampleController extends Mage_Adminhtm
 {
     public function indexAction()
     {
+        // Create & save new event
+        $event = Mage::getModel('example/event');
+        $event->setName('Test Event 2')->save();
+        // or $event->setData('name', 'Test Event 3');
+
+        Mage::getSingleton('adminhtml/session')->addSuccess(
+            'Event saved. ID=' . $event->getId()
+        );
+
         $this->loadLayout();
 
         return $this->renderLayout();

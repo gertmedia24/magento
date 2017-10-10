@@ -23,7 +23,21 @@
         <models>
             <example>
                 <class>MasteringMagento_Example_Model</class>
+                <!-- Tell Mage to use resources below -->
+                <resourceModel>example_resource</resourceModel>
             </example>
+            <!-- Need to tell Mage how to map models to db tables -->
+            <example_resource>
+                <class>MasteringMagento_Example_Model_Resource</class>
+                <entities>
+                    <event>
+                        <table>example_event</table>
+                    </event>
+                    <event_registrant>
+                        <table>example_event_registrant</table>
+                    </event_registrant>
+                </entities>
+            </example_resource>
         </models>
         <blocks>
             <example>
