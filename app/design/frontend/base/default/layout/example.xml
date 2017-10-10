@@ -10,7 +10,11 @@
 
         <!-- Sect 2: Add template for rendering content area -->
         <reference name="content">
-            <block type="core/template" template="example/welcome.phtml" />
+            <!-- loads our custom block:
+             mage looks at 'example' and finds the module
+             then welcome block
+             -->
+            <block type="example/welcome" />
         </reference>
     </example_index_index>
 </layout>
