@@ -61,6 +61,17 @@
                 <class>MasteringMagento_Example_Helper</class>
             </example>
         </helpers>
+        <!-- Sect 3: Event-handling and Observers -->
+        <events>
+            <controller_action_predispatch> <!-- fires every time controller about to render an action! -->
+                <observers>
+                    <example_observer>
+                        <class>example/observer</class>
+                        <method>controllerActionPredispatch</method>
+                    </example_observer>
+                </observers>
+            </controller_action_predispatch>
+        </events>
     </global>
     <!-- Sect 3: Extending admin - also see adminhtml.xml -->
     <admin>

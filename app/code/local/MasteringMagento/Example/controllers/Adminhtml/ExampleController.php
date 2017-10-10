@@ -9,7 +9,7 @@ class MasteringMagento_Example_Adminhtml_ExampleController extends Mage_Adminhtm
     {
         // Create & save new event
         $event = Mage::getModel('example/event');
-        $event->setName('Test Event 2')->save();
+        $event->setName('Test Event ' . random_bytes(8))->save();
         // or $event->setData('name', 'Test Event 3');
 
         Mage::getSingleton('adminhtml/session')->addSuccess(
