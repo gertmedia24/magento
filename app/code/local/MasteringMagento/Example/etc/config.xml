@@ -16,7 +16,7 @@
 <config>
     <modules>
         <MasteringMagento_Example>
-            <version>0.0.0</version>
+            <version>0.0.1</version>
         </MasteringMagento_Example>
     </modules>
     <global>
@@ -39,6 +39,18 @@
                 </entities>
             </example_resource>
         </models>
+        <!-- Sect 3: Writing module installation script -->
+        <resources>
+            <example_setup>
+                <!-- folder must be under {module}/sql/example_setup -->
+                <!-- upgrade file must be named in accordance with module version no above -->
+                <setup>
+                    <module>MasteringMagento_Example</module>
+                    <!-- Point to core class so all we need to do is create SQL script -->
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </example_setup>
+        </resources>
         <blocks>
             <example>
                 <class>MasteringMagento_Example_Block</class>
