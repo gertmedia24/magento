@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<!DOCTYPE layout>
+
+<!-- Mastering Magento Sect 2: Frontend Layouts -->
+
+<layout version="0.1.0">
+    <example_index_index>
+        <!-- Defines 2-col layout with right hand sidebar -->
+        <update handle="page_two_columns_right" />
+    </example_index_index>
+</layout>

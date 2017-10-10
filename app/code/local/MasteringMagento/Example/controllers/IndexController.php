@@ -10,6 +10,10 @@ class MasteringMagento_Example_IndexController extends Mage_Core_Controller_Fron
 {
     public function indexAction()
     {
-        echo "Hello, index!";
+        // Must first load the layout
+        $this->loadLayout();
+
+        // Always last thing to do in controller action
+        return $this->renderLayout();
     }
 }

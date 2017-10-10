@@ -37,6 +37,7 @@
         </helpers>
     </global>
     <frontend>
+        <!-- Sect 2: Controllers -->
         <routers>
             <example>
                 <use>standard</use>
@@ -46,5 +47,14 @@
                 </args>
             </example>
         </routers>
+        <!-- Sect 2: Frontend Layouts -->
+        <layout>
+            <updates>
+                <example>
+                    <!-- See app/design/frontend/base/default/layout/ -->
+                    <file>example.xml</file>
+                </example>
+            </updates>
+        </layout>
     </frontend>
 </config>
