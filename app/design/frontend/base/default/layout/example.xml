@@ -7,5 +7,10 @@
     <example_index_index>
         <!-- Defines 2-col layout with right hand sidebar -->
         <update handle="page_two_columns_right" />
+
+        <!-- Sect 2: Add template for rendering content area -->
+        <reference name="content">
+            <block type="core/template" template="example/welcome.phtml" />
+        </reference>
     </example_index_index>
 </layout>
