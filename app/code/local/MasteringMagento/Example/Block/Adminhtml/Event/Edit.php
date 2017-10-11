@@ -36,7 +36,8 @@ class MasteringMagento_Example_Block_Adminhtml_Event_Edit extends Mage_Adminhtml
 
     public function getSaveUrl() // tells form which action to run
     {
-        return $this->getUrl('*/event/save'); // points to our event controller
+        // The _current=>true tells the form to preserve the URL params so that the save URL includes the event id (else it saves to new model)
+        return $this->getUrl('*/event/save', ['_current' => true]); // points to our event controller
     }
 
 }

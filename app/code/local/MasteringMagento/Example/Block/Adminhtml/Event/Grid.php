@@ -4,6 +4,17 @@
  */
 class MasteringMagento_Example_Block_Adminhtml_Event_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
+    /**
+     * Make each row in grid clickable
+     *
+     * @param $item  Model for the row
+     * @return string
+     */
+    public function getRowUrl($item)
+    {
+        return $this->getUrl('*/event/edit', ['event_id' => $item->getId()]);
+    }
+
     public function _prepareCollection()
     {
         $collection = Mage::getModel('example/event')->getCollection();
