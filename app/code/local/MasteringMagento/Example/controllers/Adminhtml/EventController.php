@@ -10,8 +10,8 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
         $this->loadLayout();
         $this->_setActiveMenu('example/events');
 
-        $block = $this->getLayout()->createBlock('example/adminhtml_event_edit');
-        //Mage::log(__METHOD__ . " DBG: block=");
+        //$block = $this->getLayout()->createBlock('example/adminhtml_event_edit');
+        $block = $this->getLayout()->createBlock('example/adminhtml_event');
 
         $this->_addContent(
             $block
