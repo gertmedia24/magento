@@ -20,6 +20,11 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
         return $this->renderLayout();
     }
 
+    public function newAction()
+    {
+        $this->_forward('edit');
+    }
+
     public function editAction()
     {
         if ($eventId = $this->getRequest()->getParam('event_id')) {
@@ -93,4 +98,36 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
 
         $this->_redirect('*/*/index');
     }
+
+    /**
+     * Export event grid to CSV format
+     */
+    public function exportCsvAction()
+    {
+        $fileName = 'events.csv';
+        $grid = $this->getLayout()->createBlock('example/adminhtml_event_grid');
+        $this->_prepareDownloadResponse($fileName, $grid->getCsvFile());
+    }
+
+    /**
+     * Export event grid to Excel format
+     */
+    public function exportExcelAction()
+    {
+        $fileName = 'events.xlsx';
+        $grid = $this->getLayout()->createBlock('example/adminhtml_event_grid');
+        $this->_prepareDownloadResponse($fileName, $grid->getExcelFile($fileName)); // corrupt file format, but does download
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
