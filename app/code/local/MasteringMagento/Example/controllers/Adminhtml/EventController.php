@@ -74,4 +74,23 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
 
         return $this->_redirect('*/*/index');
     }
+
+    public function massDeleteAction()
+    {
+        if ($eventIds = $this->getRequest()->getParam('event_ids')) {
+            try {
+                foreach ($eventIds as $eventId) {
+                    $model = Mage::getModel('example/event')->load($eventId);
+                    $model->delete();
+                }
+                Mage::getSingleton('adminhtml/session')->addSuccess(
+                    $this->__("%d event(s) have been deleted!", count($eventIds))
+                );
+            } catch (Exception $e) { // frontend will catch this before it gets here but in case it does
+                Mage::getSingleton('adminhtml/session')->addError($this->__('You must select an event.'));
+            }
+        }
+
+        $this->_redirect('*/*/index');
+    }
 }

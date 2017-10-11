@@ -45,4 +45,23 @@ class MasteringMagento_Example_Block_Adminhtml_Event_Grid extends Mage_Adminhtml
 
         return $this;
     }
+
+    protected function _prepareMassaction()
+    {
+        $this->setMassactionIdField('event_id');
+        $this->getMassactionBlock()->setFormFieldName('event_ids');
+
+
+        // these gonna show up in the toolbar
+        $this->getMassactionBlock()->addItem('delete_event', [
+                'label' => "Delete",
+                'url' => $this->getUrl('*/*/massDelete'),
+                'confirm' => $this->__('Are you sure you wanna delete?')
+            ]
+        );
+
+        return $this;
+    }
 }
+
+
