@@ -72,6 +72,34 @@
                 </observers>
             </controller_action_predispatch>
         </events>
+        <!-- Sect: Custom product type -->
+        <catalog>
+            <product>
+                <type>
+                    <event translate="label" module="example">
+                        <label>Event Registration</label>
+                        <model>example/product_type_event</model>
+                        <!-- not specified pricing model since we just inherit from core pricing model for now -->
+                        <composite>0</composite>
+                    </event>
+                    <grouped>
+                        <allow_product_types>
+                            <event/>
+                        </allow_product_types>
+                    </grouped>
+                    <configurable>
+                        <allow_product_types>
+                            <event/>
+                        </allow_product_types>
+                    </configurable>
+                    <bundle>
+                        <allow_product_types>
+                            <event/>
+                        </allow_product_types>
+                    </bundle>
+                </type>
+            </product>
+        </catalog>
     </global>
     <!-- Sect 3: Extending admin - also see adminhtml.xml -->
     <admin>
