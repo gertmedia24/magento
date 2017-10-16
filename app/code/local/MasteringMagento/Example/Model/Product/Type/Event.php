@@ -38,9 +38,8 @@ class MasteringMagento_Example_Model_Product_Type_Event extends Mage_Catalog_Mod
         // $product->addData($productData);
         // This means we can access anything submitted via the POST on the model (even if not one of the member fields)
         if ($eventData = $product->getEventData()) {
-            Mage::log("DBG: eventData=");
-            Mage::log($eventData);
-
+//            Mage::log("DBG: eventData=");
+//            Mage::log($eventData);
 
             if ($eventData['ticket']) {
                 foreach ($eventData['ticket'] as $ticket) {
@@ -66,6 +65,14 @@ class MasteringMagento_Example_Model_Product_Type_Event extends Mage_Catalog_Mod
         }
 
         return $this;
+    }
+
+    /**
+     * Determines if options wrapper will load on frontend (used by catalog > view template somewhere)
+     */
+    public function hasOptions($product = null)
+    {
+        return true;
     }
 
 }

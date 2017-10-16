@@ -1,0 +1,22 @@
+<?php
+/**
+ * Sect 5: Frontend product views
+ *
+ * Overrides app/design/frontend/base/default/template/catalog/product/view/addtocart.phtml
+ *
+ * Note: Product needs to be in stock for this to get loaded
+ */
+?>
+
+<?php
+//Mage::log(__METHOD__ . " DBG: file addtocart=" . __FILE__);
+?>
+
+<?php $_product = $this->getProduct(); ?>
+<?php $buttonTitle = $this->__('Add to Cart'); ?>
+<?php if($_product->isSaleable()): ?>
+    <div class="add-to-cart">
+        <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
+        <?php echo $this->getChildHtml('', true, true) ?>
+    </div>
+<?php endif; ?>
