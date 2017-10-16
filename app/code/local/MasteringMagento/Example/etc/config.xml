@@ -16,7 +16,7 @@
 <config>
     <modules>
         <MasteringMagento_Example>
-            <version>5.2.0</version>
+            <version>5.4.0</version>
         </MasteringMagento_Example>
     </modules>
     <global>
@@ -36,6 +36,10 @@
                     <event_registrant>
                         <table>example_event_registrant</table>
                     </event_registrant>
+                    <!-- Sect 5: advanced product editing -->
+                    <event_ticket>
+                        <table>example_event_ticket</table>
+                    </event_ticket>
                 </entities>
             </example_resource>
         </models>
@@ -101,6 +105,16 @@
             </product>
         </catalog>
     </global>
+    <!-- Sect 5: Advanced product editing -->
+    <adminhtml>
+        <layout>
+            <updates>
+                <example>
+                    <file>example.xml</file>
+                </example>
+            </updates>
+        </layout>
+    </adminhtml>
     <!-- Sect 3: Extending admin - also see adminhtml.xml -->
     <admin>
         <routers>
