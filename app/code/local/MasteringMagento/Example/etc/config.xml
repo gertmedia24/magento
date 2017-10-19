@@ -75,6 +75,15 @@
                     </example_observer>
                 </observers>
             </controller_action_predispatch>
+            <!-- Sect 6: Cart item behavior -->
+            <catalog_product_get_final_price>
+                <observers>
+                    <example_event>
+                        <class>example/observer_catalog_product</class>
+                        <method>getFinalPrice</method>
+                    </example_event>
+                </observers>
+            </catalog_product_get_final_price>
         </events>
         <!-- Sect: Custom product type -->
         <catalog>
