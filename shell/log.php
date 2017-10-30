@@ -182,7 +182,6 @@ Usage:  php -f log.php -- [options]
   --days <days>     Save log, days. (Minimum 1 day, if defined - ignoring system value)
   status            Display statistics per log tables
   help              This help
-
 USAGE;
     }
 }
