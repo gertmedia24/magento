@@ -212,5 +212,7 @@ USAGE;
     }
 }
 
+// add a little shell magic
 $shell = new Mage_Shell_Compiler();
 $shell->run();
+
